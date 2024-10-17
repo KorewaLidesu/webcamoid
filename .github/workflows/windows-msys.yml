@@ -89,9 +89,9 @@ jobs:
         DAILY_BUILD: 1
       run: ./ports/ci/windows-msys/deploy.sh
     - name: Release Forge Installer
-      uses: actions/upload-artifact@v3.1.2
+      uses: actions/upload-artifact@v4.4.3
       if: ${{ matrix.upload }}
       with:
         name: installer
-        files: |
+        path: |
           webcamoid-packages/windows-gcc-x86_64/*
